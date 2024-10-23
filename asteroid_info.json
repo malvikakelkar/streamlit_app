@@ -1,0 +1,101 @@
+{
+  "433": {
+    "name": "Eros",
+    "type": "stony",
+    "group": "Amor",
+    "diameter": 16.84,
+    "orbital_period": 643.219,
+    "mass": 6.687e+15,
+    "aphelion": 1.7825,
+    "perihelion": 1.1334,
+    "eccentricity": 0.2226
+  },
+  "16": {
+    "name": "Psyche",
+    "type": "metallic",
+    "group": "Main-belt",
+    "diameter": 226,
+    "orbital_period": 1824.4,
+    "mass": 2.72e+19,
+    "aphelion": 3.33,
+    "perihelion": 2.51,
+    "eccentricity": 0.14
+  },
+  "21": {
+    "name": "Lutetia",
+    "type": "stony",
+    "group": "Main-belt",
+    "diameter": 100.5,
+    "orbital_period": 1384.36,
+    "mass": 1.7e+18,
+    "aphelion": 2.834,
+    "perihelion": 2.035,
+    "eccentricity": 0.164
+  },
+  "243": {
+    "name": "Ida",
+    "type": "stony",
+    "group": "Main-belt",
+    "diameter": 31.4,
+    "orbital_period": 1569.2,
+    "mass": 4.2e+16,
+    "aphelion": 2.861,
+    "perihelion": 2.743,
+    "eccentricity": 0.0206
+  },
+  "253": {
+    "name": "Mathilde",
+    "type": "carbonaceous",
+    "group": "Main-belt",
+    "diameter": 50.3,
+    "orbital_period": 1515.9,
+    "mass": 1.033e+17,
+    "aphelion": 3.24,
+    "perihelion": 1.94,
+    "eccentricity": 0.258
+  },
+  "4179": {
+    "name": "Toutatis",
+    "type": "stony",
+    "group": "Apollo",
+    "diameter": 4.5,
+    "orbital_period": 1463.0,
+    "mass": 5e+13,
+    "aphelion": 3.98,
+    "perihelion": 0.937,
+    "eccentricity": 0.629
+  },
+  "25143": {
+    "name": "Itokawa",
+    "type": "stony",
+    "group": "Apollo",
+    "diameter": 0.33,
+    "orbital_period": 556.4,
+    "mass": 3.5e10,
+    "aphelion": 1.695,
+    "perihelion": 0.953,
+    "eccentricity": 0.28
+  },
+  "101955": {
+    "name": "Bennu",
+    "type": "carbonaceous",
+    "group": "Apollo",
+    "diameter": 0.492,
+    "orbital_period": 436.65,
+    "mass": 7.329e10,
+    "aphelion": 1.356,
+    "perihelion": 0.897,
+    "eccentricity": 0.2037
+  },
+  "162173": {
+    "name": "Ryugu",
+    "type": "carbonaceous",
+    "group": "Apollo",
+    "diameter": 0.865,
+    "orbital_period": 474.38,
+    "mass": 4.5e11,
+    "aphelion": 1.415,
+    "perihelion": 0.963,
+    "eccentricity": 0.1902
+  }
+}

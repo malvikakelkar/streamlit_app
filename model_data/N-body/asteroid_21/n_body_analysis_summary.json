@@ -1,0 +1,37 @@
+{
+    "object_id": "21",
+    "rmse_position": "0.00312019591111716",
+    "rmse_velocity": "1.47019778567329e-05",
+    "minimum_deviations": {
+        "position": {
+            "X_diff": "0",
+            "Y_diff": "1.33226762955019e-15",
+            "Z_diff": "0"
+        },
+        "velocity": {
+            "VX_diff": "0",
+            "VY_diff": "0",
+            "VZ_diff": "0"
+        }
+    },
+    "maximum_deviations": {
+        "position": {
+            "X_diff": "0.0121361194856387",
+            "Y_diff": "0.0101981399512794",
+            "Z_diff": "0.0006063113754367"
+        },
+        "velocity": {
+            "VX_diff": "3.00060573919002e-05",
+            "VY_diff": "6.1979096149e-05",
+            "VZ_diff": "1.5366677316e-06"
+        }
+    },
+    "max_absolute_differences": {
+        "X_diff": "0.0121361194856387",
+        "Y_diff": "0.0101981399512794",
+        "Z_diff": "0.0006063113754367",
+        "VX_diff": "3.00060573919002e-05",
+        "VY_diff": "6.1979096149e-05",
+        "VZ_diff": "1.5366677316e-06"
+    }
+}
