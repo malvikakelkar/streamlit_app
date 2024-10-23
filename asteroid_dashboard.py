@@ -300,6 +300,7 @@ def create_2d_comparison_plot(actual_data, model_data, title, y_column):
     fig.update_xaxes(tickformat="%Y-%m", dtick="M3")
     return fig
 
+
 def create_trajectory_difference_plot(diff_data, title):
     if diff_data is None or diff_data.empty:
         st.error(f"No data available for {title}")
@@ -308,7 +309,7 @@ def create_trajectory_difference_plot(diff_data, title):
     diff_cols = ['x_diff', 'y_diff', 'z_diff', 'vx_diff', 'vy_diff', 'vz_diff']
     available_cols = [col for col in diff_cols if col in diff_data.columns]
     
-    if not available_cols:
+    if len(available_cols) == 0:
         st.error(f"No difference columns found in the data for {title}")
         return None
 
@@ -318,13 +319,15 @@ def create_trajectory_difference_plot(diff_data, title):
 
     fig = make_subplots(rows=rows, cols=cols, subplot_titles=available_cols)
     
-    diff_data['time'] = pd.to_datetime(diff_data['time'], unit='D', origin='julian')
+    # Convert Julian dates to datetime
+    diff_data = diff_data.copy()  # Create a copy to avoid modifying original data
+    diff_data['date'] = diff_data['time'].apply(julian_to_gregorian)
     
     colors = ['darkred', 'darkgreen', 'darkblue', 'darkorange', 'purple', 'teal']
     
     for i, col in enumerate(available_cols):
         row, col_num = i // 3 + 1, i % 3 + 1
-        fig.add_trace(go.Scatter(x=diff_data['time'], y=diff_data[col], mode='lines', 
+        fig.add_trace(go.Scatter(x=diff_data['date'], y=diff_data[col], mode='lines', 
                                  name=col, line=dict(color=colors[i % len(colors)])), 
                       row=row, col=col_num)
     
@@ -344,6 +347,7 @@ def create_trajectory_difference_plot(diff_data, title):
         fig.update_yaxes(autorange=True, row=i//3+1, col=i%3+1)
     
     return fig
+
 
 def display_model_analysis(col, model_name, summary):
     with col:
@@ -400,11 +404,26 @@ def display_model_analysis(col, model_name, summary):
 st.markdown("""
 <style>
     .block-container {
-        padding-top: 1rem;
+        padding-top: 2rem !important;  /* Increased from 1rem */
         padding-bottom: 3rem;
         padding-left: 5rem;
         padding-right: 5rem;
+        margin-top: 1rem;  /* Added margin-top */
     }
+    
+    /* Add specific styling for the header section */
+    .stApp header {
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Adjust the container holding the asteroid info */
+    div[data-testid="stVerticalBlock"] > div:first-child {
+        padding-top: 1rem !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* Your existing styles... */
     .stMarkdown {
         margin-bottom: 0;
     }
@@ -419,7 +438,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
     h1 {
-        margin-top: 0 !important;
+        margin-top: 0.5rem !important;  /* Added small margin-top */
         margin-bottom: 1rem !important;
     }
     .streamlit-expanderHeader {
@@ -451,6 +470,7 @@ st.markdown("""
         font-size: 130%;
         font-weight: 500;
         margin-bottom: 0.5rem;
+        padding-top: 0.5rem;  /* Added padding-top */
     }
     h1 {
         font-size: 2.5rem !important;
