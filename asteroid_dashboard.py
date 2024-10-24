@@ -560,43 +560,9 @@ with tab_overview:
     col_intro = st.container()
     with col_intro:
         st.markdown("""
-        # This project visualizes the results of predicting asteroid trajectories using three different models: 
-        # PINN, N-body, and Transformer. Each model offers a unique approach to trajectory prediction.
 
-        # ## Model Descriptions
-        
-        # ### PINN (Physics-Informed Neural Network)
-        # PINNs combine traditional neural networks with physical laws and constraints. For asteroid trajectory prediction:
-        # - They learn from both observational data and known physical equations governing orbital mechanics.
-        # - PINNs can interpolate between known data points while respecting physical constraints, potentially offering more accurate predictions in regions with sparse data.
+        this section will be modified later
 
-        # The PINN model solves the following equation:
- 
-        # $$\\frac{d^2\\bold{r}}{dt^2} = -\\frac{GM\\bold{r}}{|\\bold{r}|^3} + \\bold{F}_{other}$$
-
-        # Where:
-        # - $\\bold{r}$ is the position vector of the asteroid
-        # - $G$ is the gravitational constant
-        # - $M$ is the mass of the Sun
-        # - $\\bold{F}_{other}$ represents other forces (e.g., from other planets)
-
-        # ### N-body Simulation
-        # N-body simulations model the gravitational interactions between multiple celestial bodies:
-        # - They calculate the forces between all objects in the system at each time step.
-        # - This method is computationally intensive but can provide highly accurate results, especially for complex systems with many interacting bodies.
-
-        # The N-body simulation solves the following system of equations for each body $i$:
-
-        # $$\\frac{d^2\\bold{r}_i}{dt^2} = \\sum_{j \\neq i} G m_j \\frac{\\bold{r}_j - \\bold{r}_i}{|\\bold{r}_j - \\bold{r}_i|^3}$$
-
-        # Where:
-        # - $\\bold{r}_i$ is the position vector of body $i$
-        # - $m_j$ is the mass of body $j$
-
-        # ### Transformer Model
-        # Originally designed for natural language processing, Transformers have been adapted for time series prediction:
-        # - They use self-attention mechanisms to identify important features and relationships in sequential data.
-        # - For asteroid trajectories, they can potentially capture complex patterns and long-term dependencies in the orbital data.
         """)
 
 # Trajectory Visuals Tab
@@ -917,3 +883,44 @@ with st.expander("Help & Information"):
 # Final cleanup
 if st.session_state.get('data_loaded'):
     clean_memory()
+
+
+
+## markdown text for over view tab
+        # This project visualizes the results of predicting asteroid trajectories using three different models: 
+        # PINN, N-body, and Transformer. Each model offers a unique approach to trajectory prediction.
+
+        # ## Model Descriptions
+        
+        # ### PINN (Physics-Informed Neural Network)
+        # PINNs combine traditional neural networks with physical laws and constraints. For asteroid trajectory prediction:
+        # - They learn from both observational data and known physical equations governing orbital mechanics.
+        # - PINNs can interpolate between known data points while respecting physical constraints, potentially offering more accurate predictions in regions with sparse data.
+
+        # The PINN model solves the following equation:
+ 
+        # $$\\frac{d^2\\bold{r}}{dt^2} = -\\frac{GM\\bold{r}}{|\\bold{r}|^3} + \\bold{F}_{other}$$
+
+        # Where:
+        # - $\\bold{r}$ is the position vector of the asteroid
+        # - $G$ is the gravitational constant
+        # - $M$ is the mass of the Sun
+        # - $\\bold{F}_{other}$ represents other forces (e.g., from other planets)
+
+        # ### N-body Simulation
+        # N-body simulations model the gravitational interactions between multiple celestial bodies:
+        # - They calculate the forces between all objects in the system at each time step.
+        # - This method is computationally intensive but can provide highly accurate results, especially for complex systems with many interacting bodies.
+
+        # The N-body simulation solves the following system of equations for each body $i$:
+
+        # $$\\frac{d^2\\bold{r}_i}{dt^2} = \\sum_{j \\neq i} G m_j \\frac{\\bold{r}_j - \\bold{r}_i}{|\\bold{r}_j - \\bold{r}_i|^3}$$
+
+        # Where:
+        # - $\\bold{r}_i$ is the position vector of body $i$
+        # - $m_j$ is the mass of body $j$
+
+        # ### Transformer Model
+        # Originally designed for natural language processing, Transformers have been adapted for time series prediction:
+        # - They use self-attention mechanisms to identify important features and relationships in sequential data.
+        # - For asteroid trajectories, they can potentially capture complex patterns and long-term dependencies in the orbital data.
