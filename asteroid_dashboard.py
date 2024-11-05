@@ -360,22 +360,22 @@ def display_model_analysis(col, model_name, summary):
             deviations_data = {
                 '': ['Min Position', 'Min Velocity', 'Max Position', 'Max Velocity'],
                 'X': [
-                    format_number(summary['minimum_deviations']['position'].get('X_diff', 'N/A')),
-                    format_number(summary['minimum_deviations']['velocity'].get('VX_diff', 'N/A')),
-                    format_number(summary['maximum_deviations']['position'].get('X_diff', 'N/A')),
-                    format_number(summary['maximum_deviations']['velocity'].get('VX_diff', 'N/A'))
+                    format_number(summary['minimum_deviations']['position'].get('x_diff', 'N/A')),
+                    format_number(summary['minimum_deviations']['velocity'].get('vx_diff', 'N/A')),
+                    format_number(summary['maximum_deviations']['position'].get('x_diff', 'N/A')),
+                    format_number(summary['maximum_deviations']['velocity'].get('vx_diff', 'N/A'))
                 ],
                 'Y': [
-                    format_number(summary['minimum_deviations']['position'].get('Y_diff', 'N/A')),
-                    format_number(summary['minimum_deviations']['velocity'].get('VY_diff', 'N/A')),
-                    format_number(summary['maximum_deviations']['position'].get('Y_diff', 'N/A')),
-                    format_number(summary['maximum_deviations']['velocity'].get('VY_diff', 'N/A'))
+                    format_number(summary['minimum_deviations']['position'].get('y_diff', 'N/A')),
+                    format_number(summary['minimum_deviations']['velocity'].get('y_diff', 'N/A')),
+                    format_number(summary['maximum_deviations']['position'].get('y_diff', 'N/A')),
+                    format_number(summary['maximum_deviations']['velocity'].get('vy_diff', 'N/A'))
                 ],
                 'Z': [
-                    format_number(summary['minimum_deviations']['position'].get('Z_diff', 'N/A')),
-                    format_number(summary['minimum_deviations']['velocity'].get('VZ_diff', 'N/A')),
-                    format_number(summary['maximum_deviations']['position'].get('Z_diff', 'N/A')),
-                    format_number(summary['maximum_deviations']['velocity'].get('VZ_diff', 'N/A'))
+                    format_number(summary['minimum_deviations']['position'].get('z_diff', 'N/A')),
+                    format_number(summary['minimum_deviations']['velocity'].get('vz_diff', 'N/A')),
+                    format_number(summary['maximum_deviations']['position'].get('z_diff', 'N/A')),
+                    format_number(summary['maximum_deviations']['velocity'].get('vz_diff', 'N/A'))
                 ]
             }
             deviations_df = pd.DataFrame(deviations_data)
@@ -385,16 +385,16 @@ def display_model_analysis(col, model_name, summary):
             max_diff_data = {
                 '': ['Position', 'Velocity'],
                 'X': [
-                    format_number(summary['max_absolute_differences'].get('X_diff', 'N/A')),
-                    format_number(summary['max_absolute_differences'].get('VX_diff', 'N/A'))
+                    format_number(summary['max_absolute_differences'].get('x_diff', 'N/A')),
+                    format_number(summary['max_absolute_differences'].get('vx_diff', 'N/A'))
                 ],
                 'Y': [
-                    format_number(summary['max_absolute_differences'].get('Y_diff', 'N/A')),
-                    format_number(summary['max_absolute_differences'].get('VY_diff', 'N/A'))
+                    format_number(summary['max_absolute_differences'].get('y_diff', 'N/A')),
+                    format_number(summary['max_absolute_differences'].get('vy_diff', 'N/A'))
                 ],
                 'Z': [
-                    format_number(summary['max_absolute_differences'].get('Z_diff', 'N/A')),
-                    format_number(summary['max_absolute_differences'].get('VZ_diff', 'N/A'))
+                    format_number(summary['max_absolute_differences'].get('z_diff', 'N/A')),
+                    format_number(summary['max_absolute_differences'].get('vzw_diff', 'N/A'))
                 ]
             }
             max_diff_df = pd.DataFrame(max_diff_data)
