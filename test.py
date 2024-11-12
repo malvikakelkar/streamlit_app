@@ -247,7 +247,7 @@ def display_trajectory_plot(data, title, is_actual=False, camera_preset="front")
     camera = dict(
         up=dict(x=0, y=0, z=1),
         center=dict(x=0, y=0, z=0),
-        eye=dict(x=0, y=2, z=0)  # Front view
+        eye=dict(x=2, y=-2, z=1.5)  # Front view
     )
     
     # Update layout
